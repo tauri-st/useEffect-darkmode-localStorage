@@ -5,6 +5,10 @@ const App = () => {
 
   const [theme, setTheme] = useState("light");
 
+  useEffect(() => {
+    console.log("useEffect rigged")
+  }, [theme])
+
   return (
     <div className={`App && ${theme}`}>
       <div className="wrapper">
