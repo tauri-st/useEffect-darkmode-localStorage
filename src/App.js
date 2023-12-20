@@ -2,6 +2,9 @@ import "./styles.css";
 import { useState, useEffect } from "react";
 
 const App = () => {
+
+  const [theme, setTheme] = useState("light");
+
   return (
     <div className={`App`}>
       <div className="wrapper">
