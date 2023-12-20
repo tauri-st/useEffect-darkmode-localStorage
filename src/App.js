@@ -3,14 +3,12 @@ import { useState, useEffect } from "react";
 
 const App = () => {
 
-  const [theme, setTheme] = useState("light"); 
-
-  console.log(theme);
+  const [theme, setTheme] = useState("light");
 
   return (
-    <div className={`App`}>
+    <div className={`App && ${theme}`}>
       <div className="wrapper">
-        <button onClick={(e) => {"light" ? setTheme("dark") : setTheme("light")}}>Toggle theme</button>
+        <button onClick={(e) => {theme === "light" ? setTheme("dark") : setTheme("light")}}>Toggle theme</button>
         <p>
           <span className="accent">Fiona the flamingo loved to travel.</span>{" "}
           She flew over mountains, deserts, and oceans, making new friends along
