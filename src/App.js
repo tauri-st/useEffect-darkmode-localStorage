@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 
 const App = () => {
 
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(
+    JSON.parse(window.localStorage.getItem("theme")) || "light"
+  );
 
   /*To see if something is saved to local storage, go to
   devtools Application tab > Storage > expand Local storage to
