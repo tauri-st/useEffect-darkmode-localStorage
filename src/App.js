@@ -5,9 +5,14 @@ const App = () => {
 
   const [theme, setTheme] = useState("light");
 
+  /*To see if something is saved to local storage, go to
+  devtools Application tab > Storage > expand Local storage to
+  find url for the project, and check for the key you saved to 
+  (theme in this case) and you should see the value of the 
+  current state */
   useEffect(() => {
-    console.log("useEffect rigged")
-  }, [theme])
+    window.localStorage.setItem("theme", JSON.stringify(theme))
+  }, [theme]);
 
   return (
     <div className={`App && ${theme}`}>
